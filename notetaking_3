@@ -1,0 +1,13 @@
+this.delete = function(note_id){
+			this.note.splice(note_id, 1);
+			console.log( 'Note at ' +note_id+ ' deleted');
+		};
+		
+
+	this.edit = function(note_id, new_content){
+			if(new_content !==''){
+				this.note[note_id]=new_content;
+				console.log(new_content +' saved');
+			}
+		};
+}
