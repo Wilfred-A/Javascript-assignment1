@@ -1,0 +1,15 @@
+this.getNote = function(note_id){
+			var noteoutput = this.note[note_id];
+			console.log(noteoutput);
+		};
+
+	this.search = function(search_text){
+		var noteoutput='';
+		noteoutput += 'results for search  '+ search_text+ '\n';
+		for(var i = 0; i < this.note.length; i++){
+			if(this.note[i].includes(search_text)){
+				noteoutput += 'Note ID: '+ i +'\n' + this.note[i] + '\n' + 'By Author  ' + this.author+ '\n';
+				console.log(noteoutput);
+			}
+		}
+	};
