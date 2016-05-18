@@ -1,0 +1,11 @@
+var justice_league = new NotesApplication("justice_league");
+
+justice_league.create("Javascript is no more a child's play");
+justice_league.create("Its a language you need to learn");
+justice_league.create("Good to know");
+justice_league.create("Try it out");
+justice_league.listNotes();
+justice_league.delete(2);
+justice_league.edit(2,"new Content");
+justice_league.listNotes();
+console.log(justice_league.search("more"));
