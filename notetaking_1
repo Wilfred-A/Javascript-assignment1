@@ -1,0 +1,27 @@
+/** JavaScript-Class-LOS-XVI-Assignment
+Javascript assingment 1 
+Author: Wilfred **/
+
+
+function NotesApplication(author){
+	this.author = author;
+	this.note = [];
+	this.create = function(note_content){
+		if(note_content !== ''){
+			this.note.push(note_content);
+			console.log( note_content +" created" );
+		}
+	};
+	
+	
+	
+	this.listNotes = function(){
+		var noteoutput;
+		for(var i = 0; i < this.note.length; i++) {
+			noteoutput='';
+			noteoutput += 'Note ID: '+ i +'\n' + this.note[i] + '\n' + 'By Author  ' + this.author+'\n';
+			console.log(noteoutput);
+		}
+	};
+
+}
