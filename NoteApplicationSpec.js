@@ -10,8 +10,16 @@ describe("Create a NoteApplication:", function() {
   
  });
 
+
 it("Author should have a name", function(){
  expect(notesApplication.author).toEqual("Fred");
+});
+
+it("Create a method create Notes ", function(){
+ 
+ spyOn(notesApplication,"create");
+ notesApplication.create();
+ expect(notesApplication.create).toHaveBeenCalled();
 });
 
 
@@ -27,10 +35,16 @@ it("get method should be called", function () {
      expect(notesApplication.getNote).toHaveBeenCalled();
    });
 
-it("search method should be called", function () {
+it("should be able call search method ", function () {
      spyOn(notesApplication,"search");
      notesApplication.search();
      expect(notesApplication.search).toHaveBeenCalled();
+   });
+
+it("should be able to return a search value", function () {
+     spyOn(notesApplication,"search");
+     notesApplication.search();
+     expect(notesApplication.search(this.search_text)).toEqual(this.search_text);
    });
 
 
